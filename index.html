@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt - br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <title>MusicWorld - O streaming de musicas melhor que o spotify</title>
+
+</head>
+<body onload="loadMusicas()">
+    <header> 
+        <div class="container main-header">
+            <a href="#">
+                <div id="logo">
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 381.379 381.379" style="enable-background:new 0 0 381.379 381.379;" xml:space="preserve" style=" width: 50px; height: 50px;"> 
+<path d="M356.379,27.837H25c-13.785,0-25,11.215-25,25v275.704c0,13.785,11.215,25,25,25h331.379c13.785,0,25-11.215,25-25V52.837
+	C381.379,39.052,370.164,27.837,356.379,27.837z M298.106,240.017c0,19.495-19.633,37.69-43.889,40.657
+	c-24.222,2.922-43.854-9.431-43.854-28.926c0-19.506,19.632-37.701,43.854-40.669c16.527-1.967,25.74,3.335,25.74,3.335v-73.954
+	c0-9.258-10.018-5.935-10.018-5.935l-90.389,28.351c0,0-10.385,3.681-10.385,12.353v92.057c0,19.541-17.793,37.564-42.003,40.979
+	c-24.256,3.45-43.889-8.534-43.889-28.04c0-19.495,19.633-38.092,43.889-41.508c16.493-2.335,23.9,2.645,23.9,2.645V133.538
+	c0-12.398,10.018-25.292,22.416-28.846l102.213-31.26c12.399-3.554,22.416,3.635,22.416,16.033V240.017z"/>
+</svg>
+
+                    <h1><span>Music</span>World</h1>
+                </div>
+            </a>
+            <nav id="main-nav">
+                <ul>
+                    <li><a href="#" class="active">Home</a></li>
+                    <li><a href="artistas.html">Artistas</a></li>
+                    <li><a href="#">Categorias</a></li>
+                </ul> <!--ul-->
+            </nav> <!--nav#main-nav-->
+        </div> <!--div.container main-header-->
+    </header> <!--header-->
+
+    <main>
+        <header id="content-header" class="container flex-sb">
+            <p>Home / Artistas / Categorias</p>
+            <button onclick="showModal('#modal-cadastrar')">Adicionar Música</button>
+        </header>
+        <section class="container">
+            
+                <h1 class="section-title">Musicas</h1>
+                <article id="productions">
+
+                    <div class="card-movie">
+                        </div><!--card movie-->
+                    <div class="card-movie">
+                        </div><!--card movie-->
+                    <div class="card-movie">
+                        </div><!--card movie-->
+                    <div class="card-movie">
+                        </div><!--card movie-->
+                    <div class="card-movie">
+                        </div><!--card movie-->
+                    <div class="card-movie">
+                        </div><!--card movie-->
+                    <div class="card-movie">
+                        </div><!--card movie-->
+                </article>
+        </section>
+    </main>
+
+    <footer>
+        <p>© Copyright 2022 MusicWorld | Todos os direitos Reservados</p>
+        <p>Vitor Barreto</p>
+    </footer>
+
+    <div class="modal" id="modal-cadastrar" onclick="hideModal('#modal-cadastrar', event)">
+        <div class="modal-body">
+            <h1>Cadastrar Produção</h1>
+            <form onsubmit="insert(event)">
+                <label for="title">Title:</label>
+                <input type="text" name="title">
+                <label for="cantor">cantor:</label>
+                <input type="text" name="cantor">
+                <label for="compositor">compositor:</label>
+                <input type="text" name="compositor">
+                <label for="capa">capa:</label>
+                <input type="text" name="capa">
+                <label for="genero">genero:</label>
+                <input type="text" name="genero">
+                <button type="submit">Cadastrar</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="modal" id="modal-editar" onclick="hideModal('#modal-editar', event)">
+        <div class="modal-body">
+            <h1>Editar Produção</h1>
+            <form onsubmit="edit(event)">
+                <label for="title">Title:</label>
+                <input type="text" name="title">
+                <label for="cantor">cantor:</label>
+                <input type="text" name="cantor">
+                <label for="compositor">compositor:</label>
+                <input type="text" name="compositor">
+                <label for="capa">capa:</label>
+                <input type="text" name="capa">
+                <label for="genero">genero:</label>
+                <input type="text" name="genero">
+                <input type="hidden" name="id" />
+                <button type="submit">Editar</button>
+            </form>
+        </div>
+    </div>
+    
+    <script src="assets/js/main.js"></script>
+    
+</body>
+</html>
